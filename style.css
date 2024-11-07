@@ -6,7 +6,6 @@
     font-family:'Jost', sans-serif;
     list-style: none;
     text-decoration: none;
-
 }
 
 header{
@@ -19,7 +18,13 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 5%;
+    background-color: white;
 }
+
+.header-transparent {
+    background-color: transparent !important;
+}
+
 .logo img{
     max-width: 110px;
     height: auto;
@@ -28,12 +33,19 @@ header{
     display: flex;
 }
 .navmenu a{
-    color: #2c2c2c;
+    color: #000000;
     font-size: 16px;
     text-transform: capitalize;
     padding: 10px 20px;
     font-weight: 400;
     transition: all .42% ease;
+    background: transparent;
+    font-weight: bold;
+    font-weight: 700px;
+}
+.navmenu.open {
+    background-color: rgba(255, 255, 255, 0.441);
+
 }
 .navmenu a:hover{
     color: #EE1c47;
@@ -346,9 +358,10 @@ img {
     width: 300px;
     height: auto;
 }
-.six-info{
-    width: 100%;
-}
+
+    .six-info {
+        width: 400px;
+    }
 
 /* Responsive-css */
 @media(max-width:890px){
@@ -406,4 +419,167 @@ img {
         right: 0;
     }
 }
+}
+
+
+
+
+
+/* Tambahkan media query untuk layar kecil (smartphone) */
+@media screen and (max-width: 767px) {
+    header {
+        padding: 10px 3%;
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+        transition: 0.5s ease;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .navmenu.open {
+        right: 0;
+    }
+
+    .navmenu a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .main-home {
+        height: auto;
+        padding: 100px 5% 50px;
+    }
+
+    .main-text h1 {
+        font-size: 25px;
+        margin-right: 40px;
+    }
+
+    .main-text p {
+        font-size: 16px;
+    }
+
+    .main-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .down-arrow {
+        display: none;
+    }
+
+    .center-text h2 {
+        font-size: 24px;
+    }
+
+    .row {
+        width: 140px;
+        height: 220px;
+    }
+
+    .row img {
+        height: 120px;
+    }
+
+    .reviews h3 {
+        font-size: 22px;
+    }
+
+    .reviews img {
+        width: 80px;
+    }
+
+    .best-seller-produk h2 {
+        font-size: 22px;
+    }
+
+    .best-produk {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .produk img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 0;
+        }
+    
+        .contact-info > div {
+            width: 100%;
+        }
+    
+        .first-info {
+            text-align: center;
+        }
+    
+        .first-info img {
+            max-width: 150px;
+            margin: 0 auto;
+        }
+    
+        /* Membuat container baru untuk second, third, dan fourth info */
+        .horizontal-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    
+        .second-info, .third-info, .fourth-info {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+        }
+    
+        .second-info h4, .third-info h4, .fourth-info h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    
+        .second-info p, .third-info p, .fourth-info p {
+            margin: 5px 0;
+        }
+    
+        .five-info, .six-info {
+            order: 1; /* Memindahkan ke bawah */
+            margin-top: 20px;
+            text-align: center;
+        }
+    
+        .five-info img, .six-info img {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+    
+        /* Jika Anda ingin menambahkan garis pemisah antara setiap bagian */
+        .contact-info > div:not(:last-child),
+        .horizontal-container {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+    }
 }
