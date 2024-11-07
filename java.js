@@ -9,19 +9,20 @@ let navmenu = document.querySelector('.navmenu');
 
 menu.onclick = () => {
     menu.classList.toggle('bx-x');
-    navmenu.classList.toggle('open'); 
+    navmenu.classList.toggle('open');
+    header.classList.toggle('transparent-bg'); 
 }
+
 let downButton = document.querySelector('.down');
 
 downButton.addEventListener('click', function(e) {
-    e.preventDefault(); // Mencegah perilaku default tautan
-    const targetId = this.getAttribute('href'); // Mendapatkan ID target
-    const targetElement = document.querySelector(targetId); // Menemukan elemen target
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
 
-    // Menggunakan scroll ke target
     if (targetElement) {
         targetElement.scrollIntoView({
-            behavior: 'smooth' // Efek scroll yang halus
+            behavior: 'smooth'
         });
     }
 });
