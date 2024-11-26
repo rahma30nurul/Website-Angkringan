@@ -26,6 +26,8 @@ header{
 }
 
 .logo img{
+    background-image: url(image/logo.png);
+    background-size: cover;
     max-width: 110px;
     height: auto;
 }
@@ -386,13 +388,13 @@ img {
 }
 @media(max-width: 600px) {
     .angkringan {
-        flex-direction: column; /* Mengubah menjadi kolom di perangkat kecil */
-        align-items: center; /* Menjaga item tetap terpusat */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .row {
-        flex: 1 1 100%; /* Mengisi lebar penuh pada perangkat kecil */
-        max-width: 100%; /* Membatasi lebar maksimum ke 100% */
+        flex: 1 1 100%; 
+        max-width: 100%; 
 }
 
 @media(max-width:750px) {
@@ -422,13 +424,14 @@ img {
 }
 
 
-
-
-
 /* Tambahkan media query untuk layar kecil (smartphone) */
 @media screen and (max-width: 767px) {
     header {
         padding: 10px 3%;
+    }
+    .main-home{
+        background-image: url(image/hpp.jpg);
+        background-size: cover;
     }
 
     .logo img {
@@ -526,7 +529,7 @@ img {
             gap: 20px;
             padding: 20px 0;
         }
-    
+
         .contact-info > div {
             width: 100%;
         }
